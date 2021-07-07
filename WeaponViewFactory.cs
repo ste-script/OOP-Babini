@@ -26,8 +26,8 @@ namespace OOP_Babini
             }
         }
 
-        private static Random random = new Random();
-        private static IList<Weapons> WeaponList = new List<Weapons>();
+        private static readonly Random random = new Random();
+        private static readonly IList<Weapons> WeaponList = new List<Weapons>();
 
         private static Weapons GetRandomWeapon()
         {
@@ -46,14 +46,14 @@ namespace OOP_Babini
         public static WeaponView CreateRandomWeaponView(Maps map)
         {
             Weapons w = GetRandomWeapon();
-            return new WeaponView(WeaponFactory.createRandomWeaponLevel(w.WeaponName, map, w.Type),
+            return new WeaponView(WeaponFactory.CreateRandomWeaponLevel(w.WeaponName, map, w.Type),
                     new Texture(w.TexturePath));
         }
 
         public static WeaponView CreatePlayerWeaponView()
         {
             Weapons w = Weapons.PUNCH;
-            return new WeaponView(WeaponFactory.createRandomWeaponLevel(w.WeaponName, Maps.MAP_1, w.Type),
+            return new WeaponView(WeaponFactory.CreateRandomWeaponLevel(w.WeaponName, Maps.MAP_1, w.Type),
                     new Texture(w.TexturePath));
         }
     }
