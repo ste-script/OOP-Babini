@@ -7,14 +7,9 @@
         MAP_3
     }
 
-    public enum Weapons
+    public enum WeaponType
     {
-        BASEBALL_BAT,
-        BRASS_KNUCKLES,
-        CROWBAR,
-        HAMMER,
-        KNIFE,
-        PUNCH,
-        REVOLVER
+        MELEE,
+        RANGED
     }
 }
