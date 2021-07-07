@@ -3,7 +3,7 @@
 namespace OOP_Babini.Tests
 {
     [TestClass()]
-    public class TestWeapons
+    public class TestWeaponView
     {
         private static Weapon weapon = new Weapon();
         private static Texture texture = new Texture();
@@ -20,6 +20,11 @@ namespace OOP_Babini.Tests
         {
             Assert.AreEqual(weaponView.Texture, texture);
         }
+    }
+
+    [TestClass()]
+    public class TestWeaponViewFactory
+    {
 
         [TestMethod()]
         public void TestWeaponViewFactoryWeaponLevel()
