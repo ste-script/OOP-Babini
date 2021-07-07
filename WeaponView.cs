@@ -1,5 +1,8 @@
 ﻿namespace OOP_Babini
 {
+    /// <summary>
+    /// Encapsulate the model weapon into his view representation
+    /// </summary>
     public class WeaponView
 
     {

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace OOP_Babini
 {
+    /// <summary>
+    /// Generate weapons
+    /// </summary>
     public static class WeaponViewFactory
     {
         public class Weapons
@@ -32,7 +35,7 @@ namespace OOP_Babini
         private static Weapons GetRandomWeapon()
         {
             if (WeaponList.Count == 0)
-            { 
+            {
                 WeaponList.Add(Weapons.BASEBALL_BAT);
                 WeaponList.Add(Weapons.BRASS_KNUCKLES);
                 WeaponList.Add(Weapons.HAMMER);
@@ -42,7 +45,11 @@ namespace OOP_Babini
             }
             return WeaponList[random.Next(WeaponList.Count)];
         }
-
+        /// <summary>
+        /// Generate a random weapon based on the current map
+        /// </summary>
+        /// <param name="map"> map the map to scale the weapon damage </param>
+        /// <returns>the new weapon</returns>
         public static WeaponView CreateRandomWeaponView(Maps map)
         {
             Weapons w = GetRandomWeapon();
@@ -50,6 +57,10 @@ namespace OOP_Babini
                     new Texture(w.TexturePath));
         }
 
+        /// <summary>
+        /// Generate the initial weapon for the player
+        /// </summary>
+        /// <returns>the initial player weapon</returns>
         public static WeaponView CreatePlayerWeaponView()
         {
             Weapons w = Weapons.PUNCH;

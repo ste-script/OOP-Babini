@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace OOP_Babini
+﻿namespace OOP_Babini
 {
     internal class WeaponFactory
     {

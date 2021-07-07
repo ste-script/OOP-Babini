@@ -2,6 +2,9 @@
 
 namespace OOP_Babini.Tests
 {
+    /// <summary>
+    /// Test WeaponView
+    /// </summary>
     [TestClass()]
     public class TestWeaponView
     {
@@ -21,7 +24,9 @@ namespace OOP_Babini.Tests
             Assert.AreEqual(weaponView.Texture, texture);
         }
     }
-
+    /// <summary>
+    /// Test WeaponViewFactory
+    /// </summary>
     [TestClass()]
     public class TestWeaponViewFactory
     {
